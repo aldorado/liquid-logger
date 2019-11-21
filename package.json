@@ -2,7 +2,7 @@
   "name": "liquid-logger",
   "version": "1.0.0",
   "description": "Wrapper for console log, with colors, timestamp and stuff",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":  "npx babel src --out-dir dist",
