@@ -1,0 +1,29 @@
+{
+  "name": "liquid-logger",
+  "version": "1.0.0",
+  "description": "Wrapper for console log, with colors, timestamp and stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":  "npx babel src --out-dir dist",
+    "start": "npx babel src --watch --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldorado/liquid-logger.git"
+  },
+  "keywords": [
+    "logger"
+  ],
+  "author": "Anuar Suarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aldorado/liquid-logger/issues"
+  },
+  "homepage": "https://github.com/aldorado/liquid-logger#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1"
+  }
+}
