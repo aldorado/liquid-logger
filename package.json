@@ -1,6 +1,6 @@
 {
   "name": "liquid-logger",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Wrapper for console log, with colors, timestamp and stuff",
   "main": "dist/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "logger"
   ],
   "author": "Anuar Suarez",
-  "license": "MIT",
+  "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/aldorado/liquid-logger/issues"
   },
