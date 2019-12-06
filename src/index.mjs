@@ -5,6 +5,7 @@ class Logger {
   constructor(mode = 'development', prefix = '') {
     this.mode = mode;
     this.prefix = prefix;
+    // https://en.wikipedia.org/wiki/ISO_8601
     this.format = 'YYYY/MM/DD\THH:mm:ssZ'
   }
 
@@ -30,7 +31,7 @@ class Logger {
 
   verbose(...args) {
     if (this.mode === 'verbose') {
-      console.log('\x1b[42mVERBOSE\x1b[0m', this.prefix, ...args)
+      console.log('\x1b[47mVERBOSE\x1b[0m', this.prefix, ...args)
     };
   }
 
