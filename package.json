@@ -1,6 +1,6 @@
 {
   "name": "liquid-logger",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Wrapper for console log, with colors, timestamp and stuff",
   "main": "dist/index.js",
   "scripts": {
