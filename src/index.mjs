@@ -1,14 +1,38 @@
 class Logger {
-  static debug(...args) {
-    if (process.env.NODE_ENV === 'development') console.log('\x1b[42mDEBUG\x1b[0m', ...args);
+
+  constructor(mode = 'development', prefix = '') {
+    this._mode = mode;
+    this.prefix = prefix;
   }
 
-  static info(...args) {
-    console.log(process.env.NODE_ENV === 'development' ? '\x1b[44mINFO\x1b[0m' : `${new Date()} INFO`, ...args);
+  setVerbose() {
+    thi.mode = 'verbose';
   }
 
-  static error(...args) {
-    console.error(process.env.NODE_ENV === 'development' ? '\x1b[41mERROR\x1b[0m' : `${new Date()} ERROR`, ...args);
+  setProduction() {
+    thi.mode = 'production';
+  }
+
+  setDevevelopment() {
+    thi.mode = 'development';
+  }
+
+  verbose(...args) {
+    if (this.mode === 'verbose') {
+      console.log('\x1b[42mVERBOSE\x1b[0m', this.prefix, ...args)
+    };
+  }
+
+  debug(...args) {
+    if (this.mode !== 'production') console.log('\x1b[42mDEBUG\x1b[0m', this.prefix, ...args);
+  }
+
+  info(...args) {
+    console.log(this.mode === 'production' ? `${new Date()} INFO` : '\x1b[44mINFO\x1b[0m', this.prefix, ...args);
+  }
+
+  error(...args) {
+    console.error(this.mode === 'production' ? `${new Date()} ERROR` : '\x1b[41mERROR\x1b[0m', this.prefix, ...args);
   }
 }
 
