@@ -1,8 +1,15 @@
+import { format } from 'date-fns';
+
 class Logger {
 
   constructor(mode = 'development', prefix = '') {
     this.mode = mode;
     this.prefix = prefix;
+    this.format = 'YYYY/MM/DD\THH:mm:ssZ'
+  }
+
+  _date() {
+    return format(new Date(), this.format);
   }
 
   setVerbose() {
@@ -17,6 +24,10 @@ class Logger {
     this.mode = 'development';
   }
 
+  setFormat(format) {
+    this.format = format;
+  }
+
   verbose(...args) {
     if (this.mode === 'verbose') {
       console.log('\x1b[42mVERBOSE\x1b[0m', this.prefix, ...args)
@@ -28,11 +39,11 @@ class Logger {
   }
 
   info(...args) {
-    console.log(this.mode === 'production' ? `${new Date()} INFO` : '\x1b[44mINFO\x1b[0m', this.prefix, ...args);
+    console.log(this.mode === 'production' ? `${this._date()} INFO` : '\x1b[44mINFO\x1b[0m', this.prefix, ...args);
   }
 
   error(...args) {
-    console.error(this.mode === 'production' ? `${new Date()} ERROR` : '\x1b[41mERROR\x1b[0m', this.prefix, ...args);
+    console.error(this.mode === 'production' ? `${this._date()} ERROR` : '\x1b[41mERROR\x1b[0m', this.prefix, ...args);
   }
 }
 
