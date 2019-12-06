@@ -6,7 +6,7 @@ class Logger {
     this.mode = mode;
     this.prefix = prefix;
     // https://en.wikipedia.org/wiki/ISO_8601
-    this.format = 'yyyy/MM/DD\THH:mm:ssZ'
+    this.format = 'yyyy/MM/dd\THH:mm:ss'
   }
 
   _date() {
