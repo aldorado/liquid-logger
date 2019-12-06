@@ -1,20 +1,20 @@
 class Logger {
 
   constructor(mode = 'development', prefix = '') {
-    this._mode = mode;
+    this.mode = mode;
     this.prefix = prefix;
   }
 
   setVerbose() {
-    thi.mode = 'verbose';
+    this.mode = 'verbose';
   }
 
   setProduction() {
-    thi.mode = 'production';
+    this.mode = 'production';
   }
 
-  setDevevelopment() {
-    thi.mode = 'development';
+  setDevelopment() {
+    this.mode = 'development';
   }
 
   verbose(...args) {
@@ -35,7 +35,5 @@ class Logger {
     console.error(this.mode === 'production' ? `${new Date()} ERROR` : '\x1b[41mERROR\x1b[0m', this.prefix, ...args);
   }
 }
-
-// const logger = new Logger();
 
 export default Logger;
