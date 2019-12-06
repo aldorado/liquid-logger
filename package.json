@@ -1,13 +1,13 @@
 {
   "name": "liquid-logger",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Wrapper for console log, with colors, timestamp and stuff",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx babel src --out-dir dist",
     "start": "npx babel src --watch --out-dir dist",
-    "publish": "yarn build && npm publish"
+    "pub": "yarn build && npm publish"
   },
   "repository": {
     "type": "git",
